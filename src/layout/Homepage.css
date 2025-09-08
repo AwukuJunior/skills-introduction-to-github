@@ -1,0 +1,107 @@
+/* homepage.css */
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Sidebar layout - FIXED */
+.sidebar-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+/* Sidebar component - FIXED */
+.sidebar-component {
+  width: 250px;
+  background-color: #1e293b; /* dark blue-gray */
+  color: white;
+  height: 100%;
+  overflow-y: auto;
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0; /* Prevent sidebar from shrinking */
+}
+
+/* Header + Main content wrapper - FIXED */
+.content-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+/* Header component - FIXED */
+.header-component {
+  height: 60px;
+  background-color: #f1f5f9;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  flex-shrink: 0; /* Prevent header from shrinking */
+}
+
+/* Main content area - FIXED */
+.maincontent {
+  flex: 1;
+  padding: 1.5rem;
+  background-color: #f9fafb;
+  overflow-y: auto;
+}
+
+/* Scrollbar style (optional) */
+.maincontent::-webkit-scrollbar {
+  width: 6px;
+}
+
+.maincontent::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 116, 139, 0.4); /* slate gray */
+  border-radius: 3px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .sidebar-component {
+    position: fixed;
+    left: -250px;
+    height: 100%;
+    z-index: 1000;
+    transition: left 0.3s ease;
+  }
+
+  .sidebar-component.open {
+    left: 0;
+  }
+
+  .maincontent {
+    padding: 1rem;
+  }
+
+  /* Overlay for mobile when sidebar is open */
+  .sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+
+  .sidebar-overlay.open {
+    display: block;
+  }
+}

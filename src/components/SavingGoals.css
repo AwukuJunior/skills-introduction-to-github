@@ -1,0 +1,247 @@
+.savings-goals-container {
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.savings-goals-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.savings-goals-header h2 {
+  margin: 0;
+  color: #333;
+  font-size: 24px;
+}
+
+.add-new-goal-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.add-new-goal-button:hover {
+  background-color: #2980b9;
+}
+
+.savings-goals-table-container {
+  overflow-x: auto;
+}
+
+.savings-goals-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.savings-goals-table th,
+.savings-goals-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.savings-goals-table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #444;
+}
+
+.savings-goals-table tr:hover {
+  background-color: #f8f9fa;
+}
+
+.completed-cell,
+.delete-cell {
+  text-align: center;
+}
+
+.complete-button,
+.delete-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.complete-button:hover {
+  background-color: rgba(46, 204, 113, 0.1);
+}
+
+.delete-button:hover {
+  background-color: rgba(231, 76, 60, 0.1);
+}
+
+.completed-icon {
+  color: #2ecc71;
+}
+
+.incomplete-icon {
+  color: #e74c3c;
+}
+
+.delete-button {
+  color: #e74c3c;
+}
+
+.no-goals {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-style: italic;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: white;
+  border-radius: 12px;
+  padding: 25px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal-header h3 {
+  margin: 0;
+  color: #333;
+}
+
+.modal-close-button {
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.modal-close-button:hover {
+  color: #333;
+}
+
+.modal-body {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #444;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.error-message {
+  color: #e74c3c;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.add-button {
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.add-button:hover {
+  background-color: #27ae60;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .savings-goals-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .savings-goals-table {
+    font-size: 14px;
+  }
+
+  .savings-goals-table th,
+  .savings-goals-table td {
+    padding: 8px 10px;
+  }
+
+  .modal {
+    padding: 20px;
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .savings-goals-table {
+    font-size: 12px;
+  }
+
+  .savings-goals-table th,
+  .savings-goals-table td {
+    padding: 6px 8px;
+  }
+
+  .add-new-goal-button {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}

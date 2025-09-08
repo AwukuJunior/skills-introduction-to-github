@@ -1,0 +1,13 @@
+.tips-container { padding:20px; color:var(--text); }
+.tips-header { font-size:22px; margin:0 0 16px 0; font-weight:600; }
+.daily-tip-section h3, .other-tips-section h3 { margin:0 0 12px 0; font-size:18px; font-weight:600; }
+.daily-tip-card { background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); color:#fff; border-radius:12px; padding:20px; box-shadow: 0 6px 18px rgba(0,0,0,0.06); }
+.daily-tip-card h4 { margin:0 0 8px 0; font-size:18px; }
+.tips-grid { display:grid; grid-template-columns: repeat(auto-fill,minmax(260px,1fr)); gap:16px; margin-top:12px; }
+.tip-card { background: var(--card-bg); border-radius:8px; padding:14px; box-shadow: 0 6px 12px rgba(0,0,0,0.04); transition: transform 0.18s; }
+.tip-card:hover { transform: translateY(-4px); }
+.tip-category { display:inline-block; background:#e3f2fd; color:var(--primary-color); padding:4px 8px; border-radius:6px; font-size:12px; font-weight:600; margin-bottom:8px; }
+.tip-card h4 { margin:6px 0; }
+.tip-card p { margin:0; color:var(--muted); font-size:14px; }
+
+@media (max-width:768px){ .tips-grid { grid-template-columns: 1fr; } }

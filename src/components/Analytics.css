@@ -1,0 +1,31 @@
+.analytics-container { padding:20px; color:var(--text); }
+.analytics-header { margin:0 0 20px 0; font-size:22px; font-weight:600; }
+.time-range-selector { display:flex; gap:10px; margin-bottom:16px; }
+.time-range-selector button { background:#f1f1f1; border:none; padding:8px 12px; border-radius:6px; cursor:pointer; }
+.time-range-selector button.active { background:var(--primary-color); color:#fff; }
+
+.analytics-graph { background:var(--card-bg); border-radius:12px; padding:16px; margin-bottom:18px; box-shadow: 0 6px 18px rgba(0,0,0,0.04); }
+.graph { display:flex; height:250px; align-items:flex-end; gap:8px; padding-top:16px; }
+.graph-bar-container { display:flex; flex-direction:column; align-items:center; flex:1; }
+.graph-bar { width:100%; background:var(--primary-color); border-radius:4px 4px 0 0; transition:height 0.3s ease; }
+.graph-label { margin-top:6px; font-size:10px; color:var(--muted); }
+
+.categories-section { background:var(--card-bg); border-radius:12px; padding:16px; box-shadow: 0 6px 18px rgba(0,0,0,0.04); }
+.categories-section h3 { margin:0 0 12px 0; font-size:18px; font-weight:600; }
+.categories-list { display:flex; flex-direction:column; gap:12px; }
+.category-item { padding:12px; border-radius:8px; background:#f8f9fa; cursor:pointer; transition:all 0.2s; }
+.category-item.active { background:#e3f2fd; border-left:4px solid var(--primary-color); }
+.category-header { display:flex; justify-content:space-between; margin-bottom:8px; }
+.category-name { font-weight:500; }
+.category-percentage { font-weight:600; color:var(--primary-color); }
+.category-amount { font-size:14px; color:#555; margin-bottom:8px; }
+.progress-bar { width:100%; height:6px; background:#e0e0e0; border-radius:3px; overflow:hidden; margin-bottom:6px; }
+.progress-fill { height:100%; background:var(--primary-color); border-radius:3px; }
+.category-trend { font-size:12px; color:var(--muted); }
+.category-trend .up { color:var(--accent-color); margin-left:5px; }
+.category-trend .down { color:var(--danger-color); margin-left:5px; }
+
+@media (max-width:768px) {
+  .graph { gap:4px; }
+  .graph-label { font-size:8px; }
+}
